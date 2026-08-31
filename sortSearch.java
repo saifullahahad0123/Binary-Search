@@ -1,30 +1,28 @@
-import java.util.*;
-  
-public class sortSearch{
-    public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5,6,7};
-        int n = arr.length;   
-        int  i = 0 , j= n-1;
-        
-        int target = 7;
-        boolean x = false;
-        while(i<=j){
-            int mid = (i+j)/2;
-            if(target<arr[mid]){
-                j = mid-1;
+public class sortSearch {
 
-            }
-            else if(target>arr[mid]){
-                i = mid + 1;
-            }
-            else{
-                x = true;
-                // System.out.println(x);
+    public static void main(String[] args) {
+
+        int[] arr = {0, 0, 0, 0, 1, 1, 1, 1};
+
+        int target = 1;
+
+        int left = 0;
+        int right = arr.length - 1;
+
+        while (left <= right) {
+
+            int mid = left + (right - left) / 2;
+
+            if (arr[mid] == target) {
+                System.out.println("Found at index: " + mid);
                 break;
             }
+            else if (arr[mid] < target) {
+                left = mid + 1;
+            }
+            else {
+                right = mid - 1;
+            }
         }
-        System.out.println(x);
-
-        
     }
 }
