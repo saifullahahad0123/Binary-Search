@@ -19,15 +19,15 @@ public class floor {
             }
 
             else if (arr[mid] < target) {
-                // arr[mid] can be the floor
+                
                 floor = arr[mid];
 
-                // Search for a bigger value
+                
                 i = mid + 1;
             }
 
             else {
-                // arr[mid] is greater than target
+                
                 j = mid - 1;
             }
         }

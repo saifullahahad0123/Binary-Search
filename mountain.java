@@ -12,11 +12,10 @@ public class mountain {
             int mid = left + (right - left) / 2;
 
             if (arr[mid] < arr[mid + 1]) {
-                // We are on increasing side
                 left = mid + 1;
             } 
             else {
-                // We are on decreasing side
+    
                 right = mid;
             }
         }
